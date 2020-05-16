@@ -30,3 +30,20 @@ Now that you have packaged the build through UE4 there are still a few things yo
 
 Now at last, for running the packaged build all you need is PIP installed and not to have the packaged build in a too long file path as mentioned above. If the computer running the packaged build does not have PIP we suggest downloading Python 3.6 because PIP is included in these versions. You can download Python here: https://www.python.org/downloads/release/python-368/
 
+# Credits
+Getnamo:
+Tensorflow UE4 and SocketIO Client UE4
+https://github.com/getnamo/tensorflow-ue4
+https://github.com/getnamo/socketio-client-ue4
+
+20tab:
+UnrealEnginePython
+https://github.com/20tab/UnrealEnginePython
+
+Dneproman:
+Low Poly Universe(3d assets used in examples)
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/90186-universe-content-1550-free-meshes
+
+Pylessons:
+Prioritized experience replay
+https://pylessons.com/CartPole-PER/
