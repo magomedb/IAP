@@ -16,6 +16,34 @@ Now extract the plugins and copy them into the plugins folder in your project li
 ![in plugin folder](https://i.imgur.com/LBzEDvh.png)
 Now you are ready to launch your project. Give some times the first time you launch the project as it will be setting up the plugins and that might take some time. After you have launched the project the plugin will install its dependencies, you can see when this is done in “Output Log”, when you see the print “Successfully installed absl-py-0.9.0” it will be done and the plugin is ready. 
 
+#Tutorial on how to use
+First you have to create a IAP controller class. You can do this by clicking "Add New" then "Blueprint Class"
+![Create class](https://i.imgur.com/piIrUbC.png)
+
+When you get inside the class you will be presented with a lot of options to your right.
+![Options](https://i.imgur.com/qNGVmhH.png)
+You can either choose input as handpicked values or images. For this example we will show handpicked values.
+Now you need to setup these different inputs based on what you want. It is not that important to get stuff like learning rate correct right now, but set it to a resonable value.
+
+Now you need to setup your input, remeber make sure you update amount precepts to correspond with how many input values you have. 
+![Input](https://i.imgur.com/it38KtZ.png)
+Also note that we setup calculate reward also to be called each tick. We will get into this function later.
+
+The next step is to setup your actions space. This the amount of actions needs to be set in amount actions.
+![Actions](https://i.imgur.com/LypkyVu.png)
+We also provide some actions like shoot cloest target and move towards point that you can use.
+
+The agent needs to be able to know what is good and bad. We do this by rewarding the agent in a calculatereward function. This function can be created what ever way you want as lond as you update the reward varaible. What we like to do is to have bools that the environment set then reward the agent based on these booles and then reset them.
+![Reward](https://i.imgur.com/7qsYhO8.png)
+
+That is pretty much all you need to setup a controller. If you want to use some of the functionalty meantioned above you need to create a navmesh for the move towards point, go to the UE4 documentation if you dont know how that is done. Also if you want to use shoot target functions you need to set weapon socket. This can be done like this:
+![WeaponSocket](https://i.imgur.com/4RFVE6I.png)
+
+We also have two addition programs, one is used to plot the files that is printed out by checking "Print RewardPr1k". The other program is used to calculate means and standard deviations for the use of z-score. This program uses the file created from the checkbox "Print Observations" and gives the calculations out in a format you can just copy paste into the means and standard deviations section so that the system will understand it.
+
+If you want to know more specific use of this in an environment you can look at any of the 4 examples we give. This can be located in IAP Content->AI->Examples.
+![Examples](https://i.imgur.com/qWtLaE6.png)
+
 #Packaging and running packaged build
 When you are using the system in your own project you probably are going to want to package your project. Now to do this with the IAP and its dependencies you are going to have to be aware of some things. First of all you need to make sure your project has at least one CPP class. Yes it is weird, but it has something to do with the ue4-tensorflow plugin and the packaging of it. Meaning if you have a blueprint only project you need to add one C++ class. Do this by going to the bottom left corner and click “Add New”.
 ![CreateCpp](https://i.imgur.com/TkhfQ9n.png)
