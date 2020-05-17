@@ -17,6 +17,8 @@ Now extract the plugins and copy them into the plugins folder in your project li
 Now you are ready to launch your project. Give some times the first time you launch the project as it will be setting up the plugins and that might take some time. After you have launched the project the plugin will install its dependencies, you can see when this is done in “Output Log”, when you see the print “Successfully installed absl-py-0.9.0” it will be done and the plugin is ready. 
 
 # How to use
+This will be a short tutorial or just explanation of how the most general functionality works and how-to setup a controller. For more information go to the examples in the plugin, these will show you how to use different versions with an environment. In addition if you want even more information on how it all works and training documentation we will link you to our bachelor thesis, but we cannot do that before it is graded.
+
 First you have to create a IAP controller class. You can do this by clicking "Add New" then "Blueprint Class"
 ![Create class](https://i.imgur.com/piIrUbC.png)
 
@@ -24,9 +26,9 @@ When you get inside the class you will be presented with a lot of options to you
 ![Options](https://i.imgur.com/qNGVmhH.png)
 
 You can either choose input as handpicked values or images. For this example we will show handpicked values.
-Now you need to setup these different inputs based on what you want. It is not that important to get stuff like learning rate correct right now, but set it to a resonable value.
+Now you need to setup these different inputs based on what you want. It is not that important to get stuff like learning rate correct right now, but set it to a reasonable value.
 
-Now you need to setup your input, remeber make sure you update amount precepts to correspond with how many input values you have. 
+Now you need to setup your input, remember make sure you update amount precepts to correspond with how many input values you have. The way you setup this input is to add all the variables you want to the precept array in the precept struct, it will automatically be sent to the DQN.
 ![Input](https://i.imgur.com/it38KtZ.png)
 
 Also note that we setup calculate reward also to be called each tick. We will get into this function later.
@@ -34,17 +36,17 @@ Also note that we setup calculate reward also to be called each tick. We will ge
 The next step is to setup your actions space. This the amount of actions needs to be set in amount actions.
 ![Actions](https://i.imgur.com/LypkyVu.png)
 
-We also provide some actions like shoot cloest target and move towards point that you can use.
+We also provide some actions like shoot closest target and move towards point that you can use.
 
-The agent needs to be able to know what is good and bad. We do this by rewarding the agent in a calculatereward function. This function can be created what ever way you want as lond as you update the reward varaible. What we like to do is to have bools that the environment set then reward the agent based on these booles and then reset them.
+The agent needs to be able to know what is good and bad. We do this by rewarding the agent in a calculatereward function. This function can be created in what ever way you want as long as you update the reward  variable. What we like to do is to have bools that the environment set then reward the agent based on these booleans and then reset them.
 ![Reward](https://i.imgur.com/7qsYhO8.png)
 
-That is pretty much all you need to setup a controller. If you want to use some of the functionalty meantioned above you need to create a navmesh for the move towards point, go to the UE4 documentation if you dont know how that is done. Also if you want to use shoot target functions you need to set weapon socket. This can be done like this:
+That is pretty much all you need to setup a controller. If you want to use some of the functionality  mentioned above you need to create a navmesh for the move towards point, go to the UE4 documentation if you don't know how that is done. Also, if you want to use shoot target functions you need to set weapon socket. This can be done like this:
 ![WeaponSocket](https://i.imgur.com/4RFVE6I.png)
 
 We also have two addition programs, one is used to plot the files that is printed out by checking "Print RewardPr1k". The other program is used to calculate means and standard deviations for the use of z-score. This program uses the file created from the checkbox "Print Observations" and gives the calculations out in a format you can just copy paste into the means and standard deviations section so that the system will understand it.
 
-If you want to know more specific use of this in an environment you can look at any of the 4 examples we give. This can be located in IAP Content->AI->Examples.
+If you want to know more specific use of this in an environment, you can look at any of the 4 examples we give. This can be located in IAP Content->AI->Examples.
 
 ![Examples](https://i.imgur.com/qWtLaE6.png)
 
