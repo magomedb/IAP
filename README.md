@@ -45,9 +45,10 @@ That is pretty much all you need to setup a controller. If you want to use some 
 We also have two addition programs, one is used to plot the files that is printed out by checking "Print RewardPr1k". The other program is used to calculate means and standard deviations for the use of z-score. This program uses the file created from the checkbox "Print Observations" and gives the calculations out in a format you can just copy paste into the means and standard deviations section so that the system will understand it.
 
 If you want to know more specific use of this in an environment you can look at any of the 4 examples we give. This can be located in IAP Content->AI->Examples.
+
 ![Examples](https://i.imgur.com/qWtLaE6.png)
 
-#Packaging and running packaged build
+# Packaging and running packaged build
 When you are using the system in your own project you probably are going to want to package your project. Now to do this with the IAP and its dependencies you are going to have to be aware of some things. First of all you need to make sure your project has at least one CPP class. Yes it is weird, but it has something to do with the ue4-tensorflow plugin and the packaging of it. Meaning if you have a blueprint only project you need to add one C++ class. Do this by going to the bottom left corner and click “Add New”.
 ![CreateCpp](https://i.imgur.com/TkhfQ9n.png)
 
