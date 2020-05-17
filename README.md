@@ -17,7 +17,7 @@ Now extract the plugins and copy them into the plugins folder in your project li
 Now you are ready to launch your project. Give some times the first time you launch the project as it will be setting up the plugins and that might take some time. After you have launched the project the plugin will install its dependencies, you can see when this is done in “Output Log”, when you see the print “Successfully installed absl-py-0.9.0” it will be done and the plugin is ready. 
 
 # How to use
-This will be a short tutorial or just explanation of how the most general functionality works and how-to setup a controller. For more information go to the examples in the plugin, these will show you how to use different versions with an environment. In addition if you want even more information on how it all works and training documentation we will link you to our bachelor thesis, but we cannot do that before it is graded.
+This will be a short tutorial or just explanation of how the most general functionality works and how-to setup a controller. For more information go to the examples in the plugin, these will show you how to use different versions with an environment. In addition if you want even more information on how it all works and more we will link you to our bachelor thesis, but we cannot do that before it is graded.
 
 First you have to create a IAP controller class. You can do this by clicking "Add New" then "Blueprint Class"
 ![Create class](https://i.imgur.com/piIrUbC.png)
