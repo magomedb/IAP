@@ -68,6 +68,17 @@ Now that you have packaged the build through UE4 there are still a few things yo
 
 Now at last, for running the packaged build all you need is PIP installed and not to have the packaged build in a too long file path as mentioned above. If the computer running the packaged build does not have PIP we suggest downloading Python 3.6 because PIP is included in these versions. You can download Python here: https://www.python.org/downloads/release/python-368/
 
+# Videos
+https://youtu.be/t9GQEJkPjQo
+https://youtu.be/-LPg1Yo98zk
+https://youtu.be/MUBJcMz4Ibw
+https://youtu.be/9zMckgrrFpE
+https://youtu.be/1BZ08_SqRIY
+https://youtu.be/-179XsIUD3Y?t=17
+https://youtu.be/skoQQijbipg
+https://youtu.be/BGOQFHDh9no
+https://youtu.be/rQqG8x8hTxw
+
 # Credits
 Getnamo:
 Tensorflow UE4 and SocketIO Client UE4
