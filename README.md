@@ -16,21 +16,24 @@ Now extract the plugins and copy them into the plugins folder in your project li
 ![in plugin folder](https://i.imgur.com/LBzEDvh.png)
 Now you are ready to launch your project. Give some times the first time you launch the project as it will be setting up the plugins and that might take some time. After you have launched the project the plugin will install its dependencies, you can see when this is done in “Output Log”, when you see the print “Successfully installed absl-py-0.9.0” it will be done and the plugin is ready. 
 
-#Tutorial on how to use
+# How to use
 First you have to create a IAP controller class. You can do this by clicking "Add New" then "Blueprint Class"
 ![Create class](https://i.imgur.com/piIrUbC.png)
 
 When you get inside the class you will be presented with a lot of options to your right.
 ![Options](https://i.imgur.com/qNGVmhH.png)
+
 You can either choose input as handpicked values or images. For this example we will show handpicked values.
 Now you need to setup these different inputs based on what you want. It is not that important to get stuff like learning rate correct right now, but set it to a resonable value.
 
 Now you need to setup your input, remeber make sure you update amount precepts to correspond with how many input values you have. 
 ![Input](https://i.imgur.com/it38KtZ.png)
+
 Also note that we setup calculate reward also to be called each tick. We will get into this function later.
 
 The next step is to setup your actions space. This the amount of actions needs to be set in amount actions.
 ![Actions](https://i.imgur.com/LypkyVu.png)
+
 We also provide some actions like shoot cloest target and move towards point that you can use.
 
 The agent needs to be able to know what is good and bad. We do this by rewarding the agent in a calculatereward function. This function can be created what ever way you want as lond as you update the reward varaible. What we like to do is to have bools that the environment set then reward the agent based on these booles and then reset them.
