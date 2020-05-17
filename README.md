@@ -56,8 +56,10 @@ When you are using the system in your own project you probably are going to want
 
 This should bring up a menu where you are going to click” New C++ Class”.
 ![CreateCpp2](https://i.imgur.com/MqVLZKM.png)
+
 This will give you a progress bar that will have to finish before you can package your project. Note you only have to do this once per project.
 Now that you have created a project with a C++ file you can package your project by clicking “File” in the top left, then “Package Project”, and pick your desired platform.
+
 ![Package](https://i.imgur.com/3H41Ppp.png)
 
 Now that you have packaged the build through UE4 there are still a few things you need to do. First, go to the plugin folder of your packaged build and delete all the plugins inside, then copy over your plugins from your project to the packaged build. This is because some of the plugins we use don't always package correctly. Also make sure that the path is not too long because then the TensorFlow plugin will have some issues finding Tensorflow.
