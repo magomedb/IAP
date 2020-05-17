@@ -52,9 +52,11 @@ If you want to know more specific use of this in an environment, you can look at
 
 # Packaging and running packaged build
 When you are using the system in your own project you probably are going to want to package your project. Now to do this with the IAP and its dependencies you are going to have to be aware of some things. First of all you need to make sure your project has at least one CPP class. Yes it is weird, but it has something to do with the ue4-tensorflow plugin and the packaging of it. Meaning if you have a blueprint only project you need to add one C++ class. Do this by going to the bottom left corner and click “Add New”.
+
 ![CreateCpp](https://i.imgur.com/TkhfQ9n.png)
 
 This should bring up a menu where you are going to click” New C++ Class”.
+
 ![CreateCpp2](https://i.imgur.com/MqVLZKM.png)
 
 This will give you a progress bar that will have to finish before you can package your project. Note you only have to do this once per project.
