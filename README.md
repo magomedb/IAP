@@ -1,6 +1,7 @@
 # IAP
 Create or use an existing UE4 project
 Download the plugin from https://github.com/magomedb/IAP and export the IAP into your project’s plugins folder.
+
 ![Plugin folder](https://i.imgur.com/XIueRR7.png)
 
 Now you need to decide if you are going to use GPU or CPU. If you don't plan on using GPU and would rather use CPU you can skip this paragraph. Note that GPU is a little faster then CPU, and a lot faster if you plan on using images. So if you decide to use GPU you need to first download CUDA 9.0, you can to that from here: https://developer.nvidia.com/cuda-90-download-archive
