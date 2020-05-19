@@ -7,7 +7,7 @@ Now you need to decide if you are going to use GPU or CPU. If you don't plan on 
 After you have downloaded CUDA 9.0 you need to download the corresponding CUDNN version. We suggest CUDNN v7.6.3 for CUDA 9.0, can be found here: https://developer.nvidia.com/rdp/cudnn-archive
 Extract the CUDNN file and copy “cudnn64_7.dll” from “cuda\bin” to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\bin”, then copy “cudnn.h” from “cuda\include” to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include”, and at last copy “cudnn.lib” from “cuda\lib\x64” to “C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64”. Now you are done setting up CUDA and CUDNN for GPU support.
 
-You also need pip for the plugins to be able automatically download its dependencies. Pip comes with any python version above 3.4. If you don't have pip here is an installation link for the python version we used with automatic pip installation: https://www.python.org/downloads/release/python-368/. Note that that the installation will ask you “Add Python (version) to PATH” you need accept that for pip to get setup.
+You also need pip for the plugins to be able automatically download its dependencies. Pip comes with any python version above 3.4. If you don't have pip here is an installation link for the python version we used with automatic pip installation: https://www.python.org/downloads/release/python-368/. Note that that the installation will ask you “Add Python (version) to PATH” you need accept that for pip to get setup. You also can’t use python above 3.7 because these versions do not support tensorflow 1.
 
 Now you need to download the depending plugins. Go here: https://github.com/getnamo/tensorflow-ue4/releases, and download the version for UE4.23, and pick the GPU or CPU version depending on what you want to use.
 ![UE4TF](https://i.imgur.com/TkhfQ9n.png)
@@ -66,7 +66,7 @@ Now that you have created a project with a C++ file you can package your project
 
 Now that you have packaged the build through UE4 there are still a few things you need to do. First, go to the plugin folder of your packaged build and delete all the plugins inside, then copy over your plugins from your project to the packaged build. This is because some of the plugins we use don't always package correctly. Also make sure that the path is not too long because then the TensorFlow plugin will have some issues finding Tensorflow.
 
-Now at last, for running the packaged build all you need is PIP installed and not to have the packaged build in a too long file path as mentioned above. If the computer running the packaged build does not have PIP we suggest downloading Python 3.6 because PIP is included in these versions. You can download Python here: https://www.python.org/downloads/release/python-368/
+Now at last, for running the packaged build all you need is PIP installed and not to have the packaged build in a too long file path as mentioned above. If the computer running the packaged build does not have PIP we suggest downloading Python 3.6 because PIP is included in these versions. You can download Python here: https://www.python.org/downloads/release/python-368/. Note that this have to be python 3.4 to 3.7 as above does not support tensorflow 1.
 
 # Videos
 https://youtu.be/t9GQEJkPjQo
