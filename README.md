@@ -45,7 +45,7 @@ The agent needs to be able to know what is good and bad. We do this by rewarding
 That is pretty much all you need to setup a controller. If you want to use some of the functionality  mentioned above you need to create a navmesh for the move towards point, go to the UE4 documentation if you don't know how that is done. Also, if you want to use shoot target functions you need to set weapon socket. This can be done like this:
 ![WeaponSocket](https://i.imgur.com/4RFVE6I.png)
 
-We also have two addition programs, one is used to plot the files that is printed out by checking "Print RewardPr1k". The other program is used to calculate means and standard deviations for the use of z-score. This program uses the file created from the checkbox "Print Observations" and gives the calculations out in a format you can just copy paste into the means and standard deviations section so that the system will understand it.
+We also have two addition programs, one is used to plot the files (download here: https://drive.google.com/open?id=1_jwHQoB5IS5Y6yU6DpVSNMuaN_wB9lj7) that is printed out by checking "Print RewardPr1k". The other program is used to calculate means and standard deviations for the use of z-score (download here: https://drive.google.com/open?id=1DDd6WLhZGsWO2ijSqJzSaRkToVxI8CoK). This program uses the file created from the checkbox "Print Observations" and gives the calculations out in a format you can just copy paste into the means and standard deviations section so that the system will understand it.
 
 If you want to know more specific use of this in an environment, you can look at any of the 4 examples we give. This can be located in IAP Content->AI->Examples.
 
